@@ -1,6 +1,7 @@
 ﻿title: Start
 ---
 <<declare $playerName = "Nobody">>
+<<declare $fina = false >>
 
 Game: Hey what's your name?
 -> Not telling heehee
@@ -9,6 +10,7 @@ Game: Hey what's your name?
     <<set $playerName = "h">>
 -> REDACTED
     <<set $playerName = "Fina">>
+    <<set $fina = true>>
 Game: Thanks for launching me, {$playerName}
 Game: That's really cool of you...
 Game: Haha
@@ -25,14 +27,17 @@ Game: Get out.
 ===
 
 title: death
+position: -191,303
 ---
 Game: I kill you
 -> I have a partner and kids (unless you don't have kids idk)
 -> what
+<<if $Fina= true>>
 You are dead now lol
 ===
 
 title: pay
+position: 67,197
 ---
 You are broke lol
 You're an art student what did you expect?
