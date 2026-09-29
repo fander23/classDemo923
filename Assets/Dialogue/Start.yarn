@@ -1,0 +1,39 @@
+﻿title: Start
+---
+<<declare $playerName = "Nobody">>
+
+Game: Hey what's your name?
+-> Not telling heehee
+    <<set $playerName = "loser">>
+-> h
+    <<set $playerName = "h">>
+-> REDACTED
+    <<set $playerName = "Fina">>
+Game: Thanks for launching me, {$playerName}
+Game: That's really cool of you...
+Game: Haha
+Game: Did you need something?
+Game: You want to play?
+Game: Well, give me $69.99
+Game: If Capcom can charge that much so can I.
+Game: Or subscribe to my monthly battlepass- only $19.99.
+-> Nah
+-> Yeah ok I am rich and cool
+<<detour pay>>
+Game: Get out.
+<<jump death>>
+===
+
+title: death
+---
+Game: I kill you
+-> I have a partner and kids (unless you don't have kids idk)
+-> what
+You are dead now lol
+===
+
+title: pay
+---
+You are broke lol
+You're an art student what did you expect?
+===
