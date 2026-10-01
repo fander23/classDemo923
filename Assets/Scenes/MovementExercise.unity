@@ -350,7 +350,7 @@ GameObject:
   - component: {fileID: 596139072}
   - component: {fileID: 596139071}
   - component: {fileID: 596139070}
-  - component: {fileID: 596139069}
+  - component: {fileID: 596139074}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -358,19 +358,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &596139069
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 596139068}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e91ab5405d146fd449aed7e2d32f6bd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::MovementExercise928
-  Move: {fileID: 3582080609260597485, guid: 33097ef57aad8814e8b11bb3dfb84c5e, type: 3}
 --- !u!136 &596139070
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -466,6 +453,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &596139074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 596139068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe2e339eb51468d4d90fbed9221b8496, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MoevementExercise930
+  Move: {fileID: 3582080609260597485, guid: 33097ef57aad8814e8b11bb3dfb84c5e, type: 3}
+  speed: 10
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

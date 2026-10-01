@@ -1,5 +1,11 @@
 ﻿title: Start
 ---
+Roll a die
+<<if dice(6) == 6>>
+    You rolled a 6!
+<<else>>
+    Not very good, huh...
+<<end if>>
 <<declare $playerName = "Nobody">>
 <<declare $fina = false >>
 
@@ -32,8 +38,17 @@ position: -191,303
 Game: I kill you
 -> I have a partner and kids (unless you don't have kids idk)
 -> what
-<<if $Fina= true>>
-You are dead now lol
+    //<<if $Fina is true>>
+    //<<detour fina>>
+    //<<end if>>
+<<wait 3>>
+Game: You are dead now lol
+Game: Just kidding haha I got you
+Game: I can't kill you because of your iconic plot armor
+Game: Watch me grow haha
+<<grow Orb1 10>>
+<<change_light Orb1 lightRed>>
+<<change_light Orb1 lightGreen>>
 ===
 
 title: pay
@@ -42,3 +57,12 @@ position: 67,197
 You are broke lol
 You're an art student what did you expect?
 ===
+
+// fina:
+// ---
+// Game: Oh wait hold on a dang moment....
+// Game: You are Fina that's so awesome and cool
+// Game: I'm a big fan can you sign my assets folder
+// Game: No? Then you will die just as if you weren't Fina
+// Game: (Even though you are)
+// ===
