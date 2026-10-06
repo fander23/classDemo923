@@ -3,7 +3,12 @@ guid: 31dcdb5a4c1aac843be795f2d63535a9
 ModelImporter:
   serializedVersion: 24501
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Curver_Screen
+    second: {fileID: 2100000, guid: 543d9037cfe822a4791bffbbb57ba009, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

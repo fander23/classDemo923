@@ -20,6 +20,10 @@ Game: Hey what's your name?
 Game: Thanks for launching me, {$playerName}
 Game: That's really cool of you...
 Game: Haha
+<<up Goblin1>>
+The Goblin: And I am the Titular Goblin.
+-> ????
+Game: He's the Goblin.
 Game: Did you need something?
 -> I want to play duh
 Game: You want to play?
@@ -36,6 +40,7 @@ Game: Get out.
 title: death
 position: -191,303
 ---
+<<killRed redLight>>
 Game: I kill you
 -> I have a partner and kids (unless you don't have kids idk)
 -> what
@@ -45,7 +50,11 @@ Game: I kill you
 <<wait 3>>
 Game: You are dead now lol
 Game: Just kidding haha I got you
+<<awayRed redLight>>
 Game: I can't kill you because of your iconic plot armor
+<<wait 2>>
+The Goblin: Ermmm awkward haha
+<<bye Goblin1>>
 //Game: Watch me grow haha
 //<<grow Orb1 10>>
 //<<change_light Orb1 lightRed>>
