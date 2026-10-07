@@ -18,7 +18,7 @@ public class goblin : MonoBehaviour
     public void bye()
     {
         Debug.Log("Goblin Moved");
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        transform.Translate(2, -10, 2);
     }
 
 }
