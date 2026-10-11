@@ -1,35 +1,30 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class Character : MonoBehaviour
 {
-    public float speed = 10f;
+    public float Speed;
+    public float RotationSpeed;
+    public InputActionReference Move;
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
-        {
-            transform.position += new Vector3(0, 0, speed) * Time.deltaTime;
-        }
+        float delta = Time.deltaTime;
+        Vector2 move = Move.action.ReadValue<Vector2>();
+        
+        transform.position += transform.forward * Speed * move.y * delta;
+        
+        // rotate around the given axis, however much is wanted
+        transform.Rotate(Vector3.up, RotationSpeed * move.x * delta);
+    }
 
-        if (Input.GetKey(KeyCode.S))
+    private void OnTriggerEnter(Collider collision)
+    {
+        Interactable other = collision.gameObject.GetComponent<Interactable>();
+        if (other)
         {
-            transform.position -= new Vector3(0, 0, speed) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.position += new Vector3(0, speed, 0) * Time.deltaTime;
-        }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.position -= new Vector3(0, speed, 0) * Time.deltaTime;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            speed += speed * 2;
+            other.StartInteraction();
         }
     }
 }
