@@ -2,14 +2,49 @@
 ---
 <<MarioAppear MarioIMG>>
 Hey what's up I'm Mario.
-You should go talk to the other guy I'm sure you can figure out who he is based on the fact that he's next to me, Mario.
+
+<<if visited("VisitedMario")>>
+    <<jump VisitedLeon>>
+    <<else>>
+    <<jump NotVisitedLeon>>
+<<endif>>
+===
+
+title: NotVisitedLeon
+---
+
+You should go talk to the other guy I'm sure you can figure out who he is based on the fact that he's next to me, Mario and he is also green.
+<<MarioBye MarioIMG>>
+===
+
+title: VisitedLeon
+---
+
+Yeah that's right he's Leon S. Kennedy.
+Who's Luigi?
 <<MarioBye MarioIMG>>
 ===
 
 title: Guy
 ---
+<<if visited("Mario")>>
+    <<jump VisitedMario>>
+    <<else>>
+    <<jump NotVisitedMario>>
+    <<endif>>
+===
+
+title: VisitedMario
+---
 <<LeonAppear LeonIMG>>
 Hey what's up I'm not Mario.
 Yeah, you'd think I'd be Luigi but I'm not I don't know what to tell you please stop talking to me you're making me uncomfortable.
 <<LeonBye LeonIMG>>
+===
+
+title: NotVisitedMario
+---
+Why are you talking to me.
+-> Idk
+    Talk to the other guy first.
 ===

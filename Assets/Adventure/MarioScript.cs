@@ -16,13 +16,13 @@ public class MarioScript : MonoBehaviour
     public void MarioAppear()
     {
         Debug.Log("Mario is here");
-        transform.Translate(2500, 0, 0);
+        MarioIMG.enabled = true;
     }
 
     [YarnCommand("MarioBye")]
     public void MarioBye()
     {
         Debug.Log("Mario is gone");
-        transform.Translate(-2500, 0, 0);
+        MarioIMG.enabled = false;
     }
 }
