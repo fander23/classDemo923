@@ -892,6 +892,8 @@ MonoBehaviour:
   Speed: 10
   RotationSpeed: 90
   Move: {fileID: -582135883111015124, guid: 095b15bbe37b8664f820ff80ff24c291, type: 3}
+  Camera: {fileID: 1397501416}
+  IsTankControls: 0
 --- !u!1 &745029799
 GameObject:
   m_ObjectHideFlags: 0
